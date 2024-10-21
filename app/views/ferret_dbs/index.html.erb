@@ -1,0 +1,64 @@
+<br>
+<p style="color: green; font-size: large"><%= notice %></p>
+
+<h1>Ferret Database</h1>
+
+<!--<div id="ferret_dbs">
+  <% @ferret_dbs.each do |ferret_db| %>
+    <%= render ferret_db %>
+    <tr>
+      <%= link_to "Show this ferret db", ferret_db %>
+    </tr>
+  <% end %>
+</div>-->
+
+
+<style>
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+</style>
+
+<div id="ferret_dbs">
+  <table>
+    <thead>
+      <tr>
+        <th>Date of Birth</th>
+        <th>Genotype</th>
+        <th>Identifiers (OAR)</th>
+        <th>Identifiers (MF)</th>
+        <th>Identifiers (CHIP)</th>
+        <th>Location</th>
+        <th>Owner</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @ferret_dbs.each do |ferret_db| %>
+        <tr>
+          <td><%= ferret_db.date_of_birth %></td>
+          <td><%= ferret_db.genotype %></td>
+          <td><%= ferret_db.identifiers["OAR"] %></td>
+          <td><%= ferret_db.identifiers["MF"] %></td>
+          <td><%= ferret_db.identifiers["CHIP"] %></td>
+          <td><%= ferret_db.location %></td>
+          <td><%= ferret_db.owner %></td>
+          <td><%= link_to "Show", ferret_db %> | <%= link_to "Edit", edit_ferret_db_path(ferret_db) %> | <%= link_to "Delete", ferret_db, method: :delete, data: { confirm: "Are you sure?" } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<br>
+<%= link_to "Add New Ferret", new_ferret_db_path, class: "btn btn-primary" %>
+

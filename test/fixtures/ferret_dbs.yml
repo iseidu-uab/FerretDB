@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_of_birth: 2024-09-19
+  genotype: MyString
+  identifiers: MyString
+  location: MyString
+  owner: MyString
+
+two:
+  date_of_birth: 2024-09-19
+  genotype: MyString
+  identifiers: MyString
+  location: MyString
+  owner: MyString

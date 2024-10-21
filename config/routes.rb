@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ferret_dbs
   get 'home/index'
   root 'home#index'
   get 'home/database'

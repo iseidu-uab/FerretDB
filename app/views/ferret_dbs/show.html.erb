@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @ferret_db %>
+
+<div>
+  <%= link_to "Edit this ferret db", edit_ferret_db_path(@ferret_db) %> |
+  <%= link_to "Back to ferret dbs", ferret_dbs_path %>
+
+  <%= button_to "Destroy this ferret db", @ferret_db, method: :delete %>
+</div>

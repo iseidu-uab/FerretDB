@@ -9,7 +9,9 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
   <body>
-
+  <div style="text-align: center;">
+    <%= image_tag("uab.png", alt: "Description of the image", width: "350", height: "90" ) %>  
+  </div>
     <%= render 'home/navbar' %>
     <div class="container">
       <%= yield %>
